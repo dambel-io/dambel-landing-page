@@ -1,0 +1,17 @@
+name: Staging Deployment
+
+on:
+  push:
+    branches:
+      - "staging"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout backend repo
+        uses: actions/checkout@v4
+
+      - name: Call the webhook
+        run: |
+          curl ${{ secrets.STAGING_LANDING_PAGE_DEPLOY_WEBHOOK_URL }}

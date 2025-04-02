@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dambel | Coming soon...</title>
+    <style>
+        .coming-soon {
+            font-family: 'PT Sans Narrow';
+            text-shadow: 4px 4px 10px #563434;
+            animation: pulse 1.5s infinite alternate;
+            font-size: 100px;
+            color: #343434;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.05); }
+        }
+
+        body {
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background:
+                radial-gradient(circle at top left, #99ff99, transparent),
+                radial-gradient(circle at bottom right, #ffff99, transparent),
+                linear-gradient(135deg, #00ff88, #ffea00);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p class="coming-soon">Coming soon...</p>
+</body>
+</html>
