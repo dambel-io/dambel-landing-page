@@ -1,0 +1,14 @@
+# Enable mod_rewrite
+RewriteEngine On
+
+# Redirect subdomains of dambel.net, dambel.co, and dambel.org to the same subdomain on dambel.io
+RewriteCond %{HTTP_HOST} ^(.+)\.dambel\.(net|co|org)$ [NC]
+RewriteRule ^(.*)$ http://%1.dambel.io/$1 [L,R=301]
+
+# Redirect the root domains dambel.net, dambel.co, and dambel.org to dambel.io
+RewriteCond %{HTTP_HOST} ^(dambel\.(net|co|org))$ [NC]
+RewriteRule ^(.*)$ http://dambel.io/$1 [L,R=301]
+
+# Redirect www.dambel.io to dambel.io
+RewriteCond %{HTTP_HOST} ^www\.dambel\.io$ [NC]
+RewriteRule ^(.*)$ http://dambel.io/$1 [L,R=301]
