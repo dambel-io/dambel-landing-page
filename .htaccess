@@ -9,8 +9,4 @@ RewriteRule ^(.*)$ http://dambel.io/$1 [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.dambel\.io$ [NC]
 RewriteRule ^(.*)$ http://dambel.io/$1 [L,R=301]
 
-<Files "README.md">
-    Require all denied
-</Files>
-
-RewriteRule ^(\.git|\.github) - [F,L]
+RewriteRule ^(\.git|\.github|README.md) - [F,L]
