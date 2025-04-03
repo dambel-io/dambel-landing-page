@@ -13,4 +13,8 @@ RewriteRule ^(.*)$ http://dambel.io/$1 [L,R=301]
     Require all denied
 </Files>
 
+<Files ".gitignore">
+    Require all denied
+</Files>
+
 RewriteRule ^(\.git|\.github) - [F,L]
