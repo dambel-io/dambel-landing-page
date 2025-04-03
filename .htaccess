@@ -12,3 +12,16 @@ RewriteRule ^(.*)$ http://dambel.io/$1 [L,R=301]
 # Redirect www.dambel.io to dambel.io
 RewriteCond %{HTTP_HOST} ^www\.dambel\.io$ [NC]
 RewriteRule ^(.*)$ http://dambel.io/$1 [L,R=301]
+
+<Directory "/.github">
+    Require all denied
+</Directory>
+
+<Directory "/.git">
+    Require all denied
+</Directory>
+
+<Files "README.md">
+    Order Allow,Deny
+    Deny from all
+</Files>
