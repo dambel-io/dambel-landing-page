@@ -9,7 +9,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout backend repo
+      - name: Checkout repo
         uses: actions/checkout@v4
 
       - name: Call the webhook
